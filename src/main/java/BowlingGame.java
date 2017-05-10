@@ -47,18 +47,17 @@ public class BowlingGame {
                 }
             }
             else {// 下一个只要一个记录,则得再加上再下一格的记录
-                //sco = 10 + (int)map.get(source[i+1].charAt(0)) + (int) map.get(source[i+2].charAt(0));
-                sco = 10 + 10 + (int) map.get(source[i+2].charAt(0));
+                sco = 10 + 10 + (Integer) map.get(source[i+2].charAt(0));
             }
         }
         //size为2,则有两种情况,第一就是有spare,第二就是没有spare
         if(size == 2) {//  4/|3/|2/|...的情况
             if(flag.charAt(1) == '/') {//spare
-                sco = 10 + (int) map.get(source[i+1].charAt(0));
+                sco = 10 + (Integer) map.get(source[i+1].charAt(0));
             }
             else {//非spare
-                int first = (int) map.get(source[i].charAt(0));
-                int second = (int) map.get(source[i].charAt(1)) + first;
+                int first = (Integer) map.get(source[i].charAt(0));
+                int second = (Integer) map.get(source[i].charAt(1)) + first;
                 sco = first > second ? first : second;
             }
         }
