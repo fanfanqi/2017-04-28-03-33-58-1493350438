@@ -38,8 +38,8 @@ public class BowlingGame {
         if(size == 1) {
             if(source[i+1].length() == 2) {//下一格有两个记录
                 if(source[i+1].charAt(1) != '/') {//下一个记录中不含有'/'
-                    int first = (int) map.get(source[i + 1].charAt(0));
-                    int second = (int) map.get(source[i + 1].charAt(1)) + first;
+                    int first = (Integer) map.get(source[i + 1].charAt(0));
+                    int second = (Integer) map.get(source[i + 1].charAt(1)) + first;
                     sco = 10 + (first > second ? first : second);
                 }
                 else {//下一格记录中含有'/'
